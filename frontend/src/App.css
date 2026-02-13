@@ -1,0 +1,146 @@
+/* App.css - Minimal & Professional Design */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #f5f6f8;
+  color: #2c3e50;
+}
+
+.container {
+  max-width: 650px;
+  margin: 60px auto;
+  padding: 35px 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #34495e;
+}
+
+label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 8px;
+  color: #34495e;
+}
+
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-bottom: 20px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+select:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 5px rgba(41, 128, 185, 0.3);
+}
+
+button {
+  padding: 10px 22px;
+  margin-right: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #fff;
+  background-color: #2980b9;
+  transition: all 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #1c5980;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.transcript-box {
+  margin-top: 25px;
+  padding: 20px;
+  background-color: #f9fafc;
+  border-left: 4px solid #2980b9;
+  border-radius: 6px;
+}
+
+.transcript-box p {
+  margin: 10px 0;
+  line-height: 1.6;
+  color: #2c3e50;
+}
+
+.transcript-box strong {
+  color: #2980b9;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 30px 20px;
+    padding: 25px 20px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}
+
+.loading-text {
+  font-style: italic;
+  opacity: 0.8;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+/* existing styles... (keep everything you already have) */
+
+/* Add these at the end */
+.loading-dots {
+  position: relative;
+  display: inline-block;
+  padding-right: 1.2em;
+}
+.loading-dots::after {
+  content: "…";
+  animation: dots 1.2s steps(4, end) infinite;
+  position: absolute;
+  right: 0;
+}
+@keyframes dots {
+  0%, 20% { content: ""; }
+  40% { content: "."; }
+  60% { content: ".."; }
+  80%, 100% { content: "..."; }
+}
+
+.elapsed {
+  margin-left: 6px;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
