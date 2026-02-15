@@ -65,5 +65,44 @@ Generate Final Answer
 git clone https://github.com/Valagatan31/NCERT-RAG-Chatbot.git
 cd NCERT-RAG-Chatbot
 ```
+### backend setup
+```bash
+cd backend
+python -m venv venv
+venv\Scripts\activate   # Windows
+pip install -r requirements.txt
+```
 
+### create .env file 
+```bash
+OPENAI_API_KEY=your_key
+HUGGINGFACE_TOKEN=your_token
+```
+
+### run backend
+```bash
+uvicorn app.main:app --reload
+```
+
+### frontend setup
+```bash
+cd frontend
+npm install
+npm start
+```
+
+## Key Features
+- Context-aware answering using RAG
+- Semantic similarity search with FAISS
+- Clean REST API using FastAPI
+- React-based UI
+- Secure API key management
+- Fallback response when no relevant data is found
+
+## Future improvement 
+- Add similarity threshold filtering
+- Add metadata (chapter, page number)
+- Implement evaluation metrics (Precision@K)
+- Add hybrid search (BM25 + Dense Retrieval)
+- Dockerize the application
 
