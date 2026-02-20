@@ -14,6 +14,7 @@ The system:
 - Stores embeddings in FAISS vector database
 - Retrieves relevant chunks
 - Uses Gemini API to generate contextual answers
+- Perfrom Quantization on whisper model 
 
 If no relevant chunk is found, the system returns:
 
